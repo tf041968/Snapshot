@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5Au-tg-gVJ">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - FirstView-->
+        <scene sceneID="5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <viewController title="FirstView" id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="woodenBG.png" id="2AJ-wH-uI1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="BlackBox.png" id="P8K-gH-ud2">
+                                <rect key="frame" x="31" y="54" width="260" height="259"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="Eqk-bt-HHU" userLabel="ChosenImageView">
+                                <rect key="frame" x="40" y="64" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ChooseFilter.png" id="FEU-SJ-UAR">
+                                <rect key="frame" x="0.0" y="331" width="320" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tapToOpenCamera.png" id="owF-wP-vwJ">
+                                <rect key="frame" x="40" y="225" width="240" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" alpha="0.50000000000000011" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="bsk-Nv-PXQ">
+                                <rect key="frame" x="142" y="199" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.035294119268655777" green="0.0039215688593685627" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="color" red="1" green="1" blue="0.98823535442352295" alpha="1" colorSpace="deviceRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3E9-gH-84f" appends="YES" id="VJH-Oe-xbg"/>
+                        </connections>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Save image" id="xBG-lN-6dt">
+                            <connections>
+                                <action selector="saveImageButton:" destination="2" id="jAh-HE-kWG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Undo" id="bLh-bZ-5fu">
+                            <connections>
+                                <action selector="resetImageButton:" destination="2" id="qWv-GA-bgQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="LAv-bf-RSP"/>
+                        <barButtonItem title="Choose filter" id="ri5-7C-91A">
+                            <connections>
+                                <action selector="chooseFilterButton:" destination="2" id="Mmf-Az-NRs"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Camera" id="JNk-Fw-suu">
+                        <barButtonItem key="leftBarButtonItem" title="Photos" id="Oyy-Nu-Pmx">
+                            <connections>
+                                <action selector="openPhotoButton:" destination="2" id="yFx-qH-Pha"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="vvj-ru-pSG">
+                            <connections>
+                                <action selector="cameraButton:" destination="2" id="xAC-Cf-pEF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="2AJ-wH-uI1" id="B2V-VY-s76"/>
+                        <outlet property="blackBoxView" destination="P8K-gH-ud2" id="qeZ-us-Kpd"/>
+                        <outlet property="bottomView" destination="FEU-SJ-UAR" id="xf6-9h-QU0"/>
+                        <outlet property="cameraButton" destination="vvj-ru-pSG" id="4YF-Bq-inD"/>
+                        <outlet property="chosenImageView" destination="Eqk-bt-HHU" id="hAa-mZ-ccX"/>
+                        <outlet property="loadingCircle" destination="bsk-Nv-PXQ" id="Gcq-Cj-nu9"/>
+                        <outlet property="tapToStartOutlet" destination="owF-wP-vwJ" id="ZW5-Zm-7Vh"/>
+                        <outlet property="undoButtonOutlet" destination="bLh-bZ-5fu" id="Y3e-uK-9nR"/>
+                        <segue destination="ZAD-n1-r62" kind="push" identifier="pushImage" id="hzF-p3-rbx"/>
+                    </connections>
+                </viewController>
+                <tapGestureRecognizer id="3E9-gH-84f">
+                    <connections>
+                        <action selector="cameraButton:" destination="2" id="PPB-ju-s4S"/>
+                        <outlet property="delegate" destination="4" id="uXJ-VJ-dnX"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-137" y="27"/>
+        </scene>
+        <!--Filters View Controller - FilterView-->
+        <scene sceneID="RQM-Q0-odu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="No4-cv-BiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="FilterView" id="ZAD-n1-r62" customClass="FiltersViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ql9-jB-C1H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="woodenBG.png" id="7SA-bj-0Sm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" id="74z-U0-hmY">
+                                <rect key="frame" x="0.0" y="62" width="320" height="418"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Llq-lM-rVT">
+                                        <rect key="frame" x="20" y="25" width="130" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="woodenBG.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendImageToVC:" destination="ZAD-n1-r62" eventType="touchUpInside" id="HLk-si-zDg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qMa-Am-ycJ">
+                                        <rect key="frame" x="170" y="25" width="130" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="woodenBG.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.015686275440000001" alpha="1" colorSpace="deviceRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendImageToVC:" destination="ZAD-n1-r62" eventType="touchUpInside" id="RWn-HC-pEg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Cw-iW-g7s">
+                                        <rect key="frame" x="20" y="174" width="130" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <size key="titleShadowOffset" width="0.0" height="2"/>
+                                        <state key="normal" backgroundImage="woodenBG.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendImageToVC:" destination="ZAD-n1-r62" eventType="touchUpInside" id="lwL-oq-IC8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XED-B3-4RR">
+                                        <rect key="frame" x="170" y="174" width="130" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <size key="titleShadowOffset" width="0.0" height="3"/>
+                                        <state key="normal" backgroundImage="woodenBG.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendImageToVC:" destination="ZAD-n1-r62" eventType="touchUpInside" id="ujM-Ur-uG6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mPw-w6-Yq4">
+                                        <rect key="frame" x="20" y="320" width="130" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <size key="titleShadowOffset" width="0.0" height="3"/>
+                                        <state key="normal" backgroundImage="woodenBG.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendImageToVC:" destination="ZAD-n1-r62" eventType="touchUpInside" id="lFE-4M-ltN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uEd-xv-eAh">
+                                        <rect key="frame" x="170" y="320" width="130" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="woodenBG.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.015686275440000001" alpha="1" colorSpace="deviceRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendImageToVC:" destination="ZAD-n1-r62" eventType="touchUpInside" id="Hkc-Wn-7Wy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9an-mx-IwA">
+                                        <rect key="frame" x="20" y="466" width="130" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="woodenBG.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendImageToVC:" destination="ZAD-n1-r62" eventType="touchUpInside" id="FWn-wj-70Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZtU-aS-91L">
+                                        <rect key="frame" x="170" y="466" width="130" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <size key="titleShadowOffset" width="0.0" height="2"/>
+                                        <state key="normal" backgroundImage="woodenBG.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendImageToVC:" destination="ZAD-n1-r62" eventType="touchUpInside" id="XwZ-rW-NiP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="No4-cv-BiJ" id="6hT-di-w7l"/>
+                                </connections>
+                            </scrollView>
+                            <activityIndicatorView hidden="YES" opaque="NO" alpha="0.50000000000000011" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="MvD-Tj-eK0">
+                                <rect key="frame" x="141" y="222" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="color" red="1" green="0.98823535442352295" blue="0.98823535442352295" alpha="1" colorSpace="deviceRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filters" id="fSX-Jz-LLp"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="loadingCircle" destination="MvD-Tj-eK0" id="Zkr-Qh-Cfh"/>
+                        <outlet property="scrollView" destination="74z-U0-hmY" id="Lcv-b6-BBg"/>
+                        <outletCollection property="buttonCollection" destination="uEd-xv-eAh" id="HNW-KL-nav"/>
+                        <outletCollection property="buttonCollection" destination="mPw-w6-Yq4" id="bad-Wq-Mx1"/>
+                        <outletCollection property="buttonCollection" destination="XED-B3-4RR" id="hVB-Mf-nwf"/>
+                        <outletCollection property="buttonCollection" destination="6Cw-iW-g7s" id="g9Q-jS-11y"/>
+                        <outletCollection property="buttonCollection" destination="qMa-Am-ycJ" id="3aZ-Ri-vO2"/>
+                        <outletCollection property="buttonCollection" destination="Llq-lM-rVT" id="axB-z7-mSd"/>
+                        <outletCollection property="buttonCollection" destination="9an-mx-IwA" id="t2Z-Ge-D4T"/>
+                        <outletCollection property="buttonCollection" destination="ZtU-aS-91L" id="8cA-Ge-ZMi"/>
+                        <segue destination="2" kind="push" identifier="pushImageBack" id="ahx-Bq-x46"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="294" y="18"/>
+        </scene>
+        <!--Navigation Controller - Navigation Controller-->
+        <scene sceneID="JgF-Lz-SXU">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zbq-1d-9RH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController title="Navigation Controller" definesPresentationContext="YES" toolbarHidden="NO" id="5Au-tg-gVJ" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackTranslucent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackTranslucent" id="iYa-8L-tHs">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" barStyle="blackTranslucent" id="Zt8-AT-aJi">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="smz-pp-G4a"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-649" y="103"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BlackBox.png" width="516" height="516"/>
+        <image name="ChooseFilter.png" width="640" height="122"/>
+        <image name="tapToOpenCamera.png" width="640" height="73"/>
+        <image name="woodenBG.png" width="640" height="960"/>
+    </resources>
+    <classes>
+        <class className="FiltersViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FiltersViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="filterImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="loadingCircle" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outletCollection" name="buttonCollection" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="backgroundImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="blackBoxView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="bottomView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cameraButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="chosenImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="loadingCircle" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="tapToStartOutlet" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="undoButtonOutlet" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <nil key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
